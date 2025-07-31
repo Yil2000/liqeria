@@ -92,7 +92,7 @@ body{
 
 .navbar{
     z-index: 5;
-    position: fixed;
+    position: sticky;
     top:0;
     padding: 0 2em;
     display: flex;
@@ -294,7 +294,6 @@ body{
     font-weight: 700;
     font-size: clamp(19px,1.5em,50px);
     color:var(--secondery-h-color);
-    text-wrap: nowrap;
     margin: 1em;
 }
 
@@ -668,7 +667,7 @@ body.expanded-mode {
     justify-content: space-between;
     gap: 2em;
     min-height: 180px;
-    width: 25em;
+    max-width: 25em;
 }
 
 .contact-option h5{
@@ -1124,7 +1123,7 @@ body.expanded-mode {
 .footer-info{
     flex-wrap: wrap;
     padding: 2em;
-    width: 60%;
+    min-width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
