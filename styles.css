@@ -329,7 +329,7 @@ body{
 .about-info h3{
     color: var(--main-h-color);
     text-wrap: nowrap;
-    font-size: clamp(24px,4em,100px);
+    font-size: clamp(24px,3.5rem,100px);
 }
 .about-info p{
     color: var(--text-color);
@@ -391,6 +391,7 @@ body{
 }
 
 .creation-content h4{
+    text-align: center;
     color: var(--secondery-h-color);
     font-size: clamp(20px,2vw,30px);
     font-weight: 400;
