@@ -781,20 +781,6 @@ body.expanded-mode {
 
 
 .grading-boxs{
-    overflow: hidden;
-    justify-content: center;
-    max-width: 60em;
-    height: 25em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2em;
-    padding: 2em;
-}
-
-
-.grading-boxs{
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -1275,6 +1261,7 @@ body.expanded-mode {
 .access-full-body h2{
     margin: 1em 0;
 }
+
 
 
 
