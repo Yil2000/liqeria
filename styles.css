@@ -793,24 +793,22 @@ body.expanded-mode {
     padding: 2em;
 }
 
-.grading-box{
-        overflow-x: auto;
+
+.grading-boxs{
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    width: clamp(250px, 80vw, 320px);
-    height: clamp(250px, 80vh, 320px);
+    justify-content: center;
+    max-width: 60em;
+    height: 25em;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    border-radius: 10px;
-    color:#8B4513 ;
-    background-color: #fff7f1;
-    box-shadow: 10px 10px 20px 1px rgba(139, 69, 19,0.1);
-    flex-shrink: 0;
+    justify-content: flex-start;
+    gap: 2em;
     padding: 2em;
 }
 
@@ -1277,6 +1275,7 @@ body.expanded-mode {
 .access-full-body h2{
     margin: 1em 0;
 }
+
 
 
 
