@@ -736,8 +736,6 @@ body.expanded-mode {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-        -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
 }
 
 .grading-head{
@@ -780,9 +778,7 @@ body.expanded-mode {
   left: -3em;
 }
 
-.grading-boxs::-webkit-scrollbar {
-  display: none;
-}
+
 
 .grading-boxs{
     overflow-x: auto;
@@ -1281,4 +1277,5 @@ body.expanded-mode {
 .access-full-body h2{
     margin: 1em 0;
 }
+
 
