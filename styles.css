@@ -781,12 +781,6 @@ body.expanded-mode {
 
 
 .grading-boxs{
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
     overflow: hidden;
     justify-content: center;
     max-width: 60em;
@@ -800,6 +794,12 @@ body.expanded-mode {
 }
 
 .grading-box{
+        overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
     width: clamp(250px, 80vw, 320px);
     height: clamp(250px, 80vh, 320px);
     display: flex;
@@ -1277,5 +1277,6 @@ body.expanded-mode {
 .access-full-body h2{
     margin: 1em 0;
 }
+
 
 
