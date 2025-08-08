@@ -317,13 +317,13 @@ body{
     margin: 0.5em;
     color: var(--main-h-color);
     text-wrap: nowrap;
-    font-size: clamp(10px,2.5vw,300px);
+    font-size: clamp(20px,2.5vw,300px);
 }
 
 .creation-content h4{
         text-align: center;
     color: var(--secondery-h-color);
-    font-size: clamp(5px,2vw,300px);
+    font-size: clamp(15px,2vw,300px);
     font-weight: 400;
 }
 
@@ -404,12 +404,12 @@ body{
 .collection-h h3{
     color: var(--main-h-color);
     margin: 1vh;
-    font-size: clamp(10px,3vw,300px);
+    font-size: clamp(30px,3vw,300px);
 }
 
 .collection-h h4{
     color: var(--secondery-h-color);
-    font-size: clamp(10px,2vw,300px);
+    font-size: clamp(20px,2vw,300px);
     font-weight: 400;
 }
 
@@ -577,14 +577,14 @@ body{
 
 .contact-head h3{
     color: var(--main-h-color);
-    font-size: clamp(10px,3vw,300px);
+    font-size: clamp(30px,3vw,300px);
     margin: 1rem;
 }
 .contact-head h4{
     font-weight: 400;
     width: 60%;
     color: var(--secondery-h-color);
-    font-size: clamp(10px,1.5vw,200px);
+    font-size: clamp(20px,1.5vw,200px);
 }
 
 .contact-info{
@@ -612,7 +612,7 @@ body{
 }
 
 .contact-option h5{
-    font-size:clamp(10px,1.3vw,300px);
+    font-size:clamp(20px,1.5vw,300px);
     color: var(--main-h-color);
 }
 
@@ -631,7 +631,7 @@ body{
 }
 
 .contact-option p{
-    font-size:clamp(10px,1rem,300px);
+    font-size:clamp(15px,1.5rem,300px);
     color: var(--text-color);
 }
 
@@ -1246,3 +1246,4 @@ body{
     margin: 1em 0;
 
 }
+
