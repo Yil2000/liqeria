@@ -187,7 +187,7 @@ body{
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    background: url(media/cg-hero2.jpg);
+    background: url(cg-hero2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1244,4 +1244,5 @@ body{
 
 .access-full-body h2{
     margin: 1em 0;
+
 }
