@@ -19,76 +19,6 @@ body{
 }
 
 
-.accessibility{
-    z-index: 1000;
-    display:flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: fixed;
-    isolation: isolate;
-    top: 20%;
-    right:0;
-}
-
-.high-contrast {
-  background-color: black !important;
-  color: white !important;
-}
-
-.access-logo{
-    cursor:pointer;
-    padding: 1.5rem;
-    border-radius: 25%  0  0 25% ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #4054B2;
-}
-
-.access-logo i {
-    font-size: 2rem;
-    color: white;
-}
-
-.access-content{
-    margin-right: auto;
-    width: 170px;
-    padding: 1em;
-    background-color: white;
-    border: 1px solid #4054B2;
-    display: none;
-    flex-direction:column;
-    align-items: flex-start;
-    text-align: right;
-    gap: 1rem;
-}
-.access-content h3{
-    margin: auto;
-}
-
-.access-content button{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    background:none;
-    border: none;
-    width: 80%; 
-}
-
-.access-content button:active{
-    background-color: #4054B2;
-    border: 0.5px dashed grey;
-}
-
-
-.access-content span{
-    margin-right: auto; 
-}
-
-
 
 .navbar{
     z-index: 5;
@@ -138,7 +68,7 @@ body{
     height: 100%;
     padding: 0 20px;
     font-weight: 400;
-    font-size: clamp(5px,1rem,20px);
+    font-size: clamp(5px,1rem,300px);
     text-decoration: none;
     color: var(--secondery-h-color);
     border-bottom: 3px solid transparent;
@@ -198,7 +128,7 @@ body{
 
     .navbar-content a{
         font-size: 2em;
-        padding: 1em;
+        padding: 0.7em;
         width: 100%;
         height: auto;
         justify-content: flex-end;
@@ -257,7 +187,7 @@ body{
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    background: url(cg-hero2.jpg);
+    background: url(media/cg-hero2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -277,7 +207,7 @@ body{
 
 .hero-content h1{
     font-weight:700;
-    font-size: clamp(100px,5em,500px);
+    font-size: clamp(30px,8em,700px);
     margin-bottom: 3rem;
     background:linear-gradient(128deg,rgb(148, 66, 8),rgb(107, 129, 6));
     background-clip: text;
@@ -285,14 +215,14 @@ body{
 }
 .hero-content h2{
     font-weight: 800;
-    font-size: clamp(25px,2em,250px);
+    font-size: clamp(5px,2em,250px);
     text-wrap: nowrap;
     color:var(--main-h-color);
 }
 
 .hero-content p{
     font-weight: 700;
-    font-size: clamp(19px,1.5em,50px);
+    font-size: clamp(5px,1.5em,50px);
     color:var(--secondery-h-color);
     margin: 1em;
 }
@@ -329,11 +259,11 @@ body{
 .about-info h3{
     color: var(--main-h-color);
     text-wrap: nowrap;
-    font-size: clamp(24px,3.5rem,100px);
+    font-size: clamp(5px,3rem,200px);
 }
 .about-info p{
     color: var(--text-color);
-    font-size: clamp(18px,1em,40px);
+    font-size: clamp(5px,1em,200px);
     line-height: 1.6;
 }
 
@@ -387,13 +317,13 @@ body{
     margin: 0.5em;
     color: var(--main-h-color);
     text-wrap: nowrap;
-    font-size: clamp(30px,2.5vw,100px);
+    font-size: clamp(10px,2.5vw,300px);
 }
 
 .creation-content h4{
-    text-align: center;
+        text-align: center;
     color: var(--secondery-h-color);
-    font-size: clamp(20px,2vw,30px);
+    font-size: clamp(5px,2vw,300px);
     font-weight: 400;
 }
 
@@ -436,7 +366,7 @@ body{
 .creation-box h5{
     margin: 0.5em;
     color: var(--main-h-color);
-    font-size: clamp(10px,1.5em,30px);
+    font-size: clamp(5px,1.5em,300px);
     font-weight: 700;
 }
 
@@ -474,12 +404,12 @@ body{
 .collection-h h3{
     color: var(--main-h-color);
     margin: 1vh;
-    font-size: clamp(40px,3vw,100px);
+    font-size: clamp(10px,3vw,300px);
 }
 
 .collection-h h4{
     color: var(--secondery-h-color);
-    font-size: clamp(20px,2vw,30px);
+    font-size: clamp(10px,2vw,300px);
     font-weight: 400;
 }
 
@@ -499,40 +429,49 @@ body{
 
 .collection-img-div {
     margin-bottom: 1em;
-  border-radius: 10px;
-  position: relative;
-  width: 250px;
-  height: 300px;
-  overflow: hidden;
-  cursor: zoom-in;
-  box-shadow: 0 20px 25px -5px rgb(218, 218, 218);
+    border-radius: 10px;
+    position: relative;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 20px 25px -5px rgb(218, 218, 218);
 }
 
 .liquer-img.expanded {
-    cursor: zoom-out;
     position: fixed;
-    top: 10vh;
-    left: 35%;
-    width: 30vw;
-    height: 80vh;
-    z-index: 1000;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    border-radius: 10px;
+    width:fit-content;
+    max-height: 80vh;
+    object-fit: contain;
+    cursor: zoom-out;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 }
 
-body.expanded-mode {
-    overflow: hidden; /* מונע גלילה כשהתמונה פתוחה */
+
+@media(max-width:1000px) {
+    .liquer-img.expanded {
+        width: 80%;
+        height: fit-content;
+
+    }
 }
 
-#overlay{
+#overlay {
     position: fixed;
     top: 0;
-    z-index: 999;
-    display: none;
-    height: 100vh;
+    left: 0;
     width: 100vw;
-    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: zoom-out;
 }
+
 
 
 .liquer-img{
@@ -546,7 +485,7 @@ body.expanded-mode {
 
 
 .collection-box img:hover{
-    transform:scale(1.05);
+    transform:scale(10);
 }
 .collection-box h6{
     color: var(--main-h-color);
@@ -582,11 +521,11 @@ body.expanded-mode {
 .am-text h3{
     color: var(--main-h-color);
     text-wrap: nowrap;
-    font-size: clamp(24px,4em,100px);
+    font-size: clamp(10px,4em,300px);
 }
 .am-text p{
     color: var(--text-color);
-    font-size: clamp(18px,1em,40px);
+    font-size: clamp(5px,1em,200px);
     line-height: 1.6;
 }
 
@@ -638,14 +577,14 @@ body.expanded-mode {
 
 .contact-head h3{
     color: var(--main-h-color);
-    font-size: clamp(30px,3vw,50px);
+    font-size: clamp(10px,3vw,300px);
     margin: 1rem;
 }
 .contact-head h4{
     font-weight: 400;
     width: 60%;
     color: var(--secondery-h-color);
-    font-size: clamp(15px,2vw,25px);
+    font-size: clamp(10px,1.5vw,200px);
 }
 
 .contact-info{
@@ -669,10 +608,11 @@ body.expanded-mode {
     gap: 2em;
     min-height: 180px;
     max-width: 25em;
+    
 }
 
 .contact-option h5{
-    font-size:clamp(20px,2vw,25px);
+    font-size:clamp(10px,1.3vw,300px);
     color: var(--main-h-color);
 }
 
@@ -691,7 +631,7 @@ body.expanded-mode {
 }
 
 .contact-option p{
-    font-size:clamp(17px,1vw,17px);
+    font-size:clamp(10px,1rem,300px);
     color: var(--text-color);
 }
 
@@ -736,10 +676,11 @@ body.expanded-mode {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
+
 }
 
 .grading-head{
-    font-size: clamp(30px,3vw,50px);
+    font-size: clamp(10px,3em,300px);
     color: var(--main-h-color);
 }
 
@@ -779,7 +720,6 @@ body.expanded-mode {
 }
 
 
-
 .grading-boxs{
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -797,7 +737,6 @@ body.expanded-mode {
     gap: 2em;
     padding: 2em;
 }
-
 
 .grading-box{
     width: clamp(250px, 80vw, 320px);
@@ -897,7 +836,7 @@ body.expanded-mode {
 
 .recommendation-content h3 {
     text-align: center;
-    font-size: clamp(20px, 2vw, 25px);
+    font-size: clamp(10px, 2vw, 300px);
     margin-bottom: 1em;
 }
 
@@ -999,6 +938,35 @@ body.expanded-mode {
 }
 
 
+/* יצירת האנימציית טעינה בזמן שליחת טופס */
+/* מצב טעינה */
+.loading {
+  position: relative;
+  color: transparent !important; /* מסתיר את הטקסט */
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #ffffff; /* צבע הספינר */
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* אנימציית סיבוב */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
 .FAQ-section{
     scroll-margin: 100px;
     width: 100%;
@@ -1034,19 +1002,19 @@ body.expanded-mode {
     text-wrap: nowrap;
     font-weight: 600;
     color: var(--main-h-color);
-    font-size: clamp(30px,2.5rem,100px);
+    font-size: clamp(10px,2.5rem,300px);
 }
 .faq-head h4{
     text-wrap: nowrap;
     color: var(--secondery-h-color);
-    font-size: clamp(7px,1.5em,50px);
+    font-size: clamp(10px,1.5em,300px);
     font-weight: 400;
 }
 
 .faq-items{
     display: flex;
     flex-direction: column;
-    width: clamp(50%,10vw,1000px);
+    width: clamp(70%,10vw,1000px);
 
 }
 
@@ -1062,7 +1030,7 @@ body.expanded-mode {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: clamp(5px, 1.5rem, 100px);
+    font-size: clamp(5px, 1.2rem, 300px);
     color: var(--secondery-h-color);
     font-weight: 600;
     border: none;
@@ -1130,12 +1098,12 @@ body.expanded-mode {
     border-bottom: 0.3px solid rgba(200, 161, 101,0.3) 
 }
 .footer-info-box h6{
-    font-size: clamp(7px,2.5em,25px);
+    font-size: clamp(7px,1.5em,200px);
     color: white;
 }
 .footer-info p{
     font-weight: 600;
-    font-size: clamp(5px,1.5em,18px);
+    font-size: clamp(5px,1em,200px);
     color: #c8a165;
 }
 .footer-info-box{
@@ -1262,7 +1230,7 @@ body.expanded-mode {
     display: flex;
     align-items:flex-end;
     justify-content: center;
-    font-size: 1.7em;
+    font-size: 1em;
     line-height: 1.6;
 }
 
@@ -1277,9 +1245,3 @@ body.expanded-mode {
 .access-full-body h2{
     margin: 1em 0;
 }
-
-
-
-
-
-

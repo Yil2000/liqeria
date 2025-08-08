@@ -1,175 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const sidebarCheckbox = document.getElementById("sidebar-active");
-  const navLinks = document.querySelectorAll(".navbar-content a");
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      sidebarCheckbox.checked = false;
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const accessToggle = document.querySelector(".access-logo");
-  const accessPanel = document.querySelector(".access-content");
-  const root = document.documentElement;
-  const site = document.getElementById("site-content"); // רק על אלמנט זה יחולו הסגנונות
-  const accessToggleButton = accessToggle;
-
-  let currentFontSize = 1;
-  let isGrayscale = false;
-  let isHighContrast = false;
-  let isInverted = false;
-  let isLightBg = false;
-  let linksHighlighted = false;
-  let isReadableFont = false;
-
-
-
-  accessToggle.onclick = () => {
-    accessPanel.style.display =
-      accessPanel.style.display === "flex" ? "none" : "flex";
-  };
-
-  const increaseText = () => {
-    if (currentFontSize < 1.8) {
-      currentFontSize += 0.1;
-      site.style.fontSize = currentFontSize + "em";
-      updateAccessButtonBackground(true);
-    }
-  };
-
-  const decreaseText = () => {
-    if (currentFontSize > 0.6) {
-      currentFontSize -= 0.1;
-      site.style.fontSize = currentFontSize + "em";
-      updateAccessButtonBackground(true);
-    }
-  };
-
-  const toggleGrayscale = () => {
-    isGrayscale = !isGrayscale;
-    updateFilters();
-    updateAccessButtonBackground(isAnyAccessibilityActive());
-  };
-
-  const toggleHighContrast = () => {
-    isHighContrast = !isHighContrast;
-    site.classList.toggle("high-contrast", isHighContrast);
-    updateAccessButtonBackground(isAnyAccessibilityActive());
-  };
-
-  const toggleInverted = () => {
-    isInverted = !isInverted;
-    updateFilters();
-    updateAccessButtonBackground(isAnyAccessibilityActive());
-  };
-
- const toggleLightBackground = () => {
-  isLightBg = !isLightBg;
-
-  // שנה צבע רקע וצבע טקסט לכל האלמנטים בתוך #site-content
-  site.querySelectorAll("*").forEach((el) => {
-    el.style.backgroundColor = isLightBg ? "#fff" : "";
-    el.style.color = isLightBg ? "#000" : "";
-  });
-
-  // שנה גם את צבע הרקע והטקסט של האלמנט הראשי עצמו
-  site.style.backgroundColor = isLightBg ? "#fff" : "";
-  site.style.color = isLightBg ? "#000" : "";
-
-  updateAccessButtonBackground(isAnyAccessibilityActive());
-};
-
-  const toggleHighlightLinks = () => {
-    linksHighlighted = !linksHighlighted;
-    site.querySelectorAll("a").forEach((link) => {
-      link.style.outline = linksHighlighted ? "3px solid orange" : "";
-      link.style.backgroundColor = linksHighlighted ? "yellow" : "";
-    });
-    updateAccessButtonBackground(isAnyAccessibilityActive());
-  };
-
-  const toggleReadableFont = () => {
-    isReadableFont = !isReadableFont;
-    site.style.fontFamily = isReadableFont ? "Arial, sans-serif" : "";
-    updateAccessButtonBackground(isAnyAccessibilityActive());
-  };
-
-  const updateFilters = () => {
-    let filterValue = "";
-    if (isGrayscale) filterValue += "grayscale(1) ";
-    if (isInverted) filterValue += "invert(1) hue-rotate(180deg) ";
-    site.style.filter = filterValue.trim() || "none";
-
-    if (!isInverted) {
-      site.querySelectorAll("img").forEach((img) => {
-        img.style.filter = "";
-      });
-    }
-  };
-
-  const resetAccessibility = () => {
-    currentFontSize = 1;
-    site.style.fontSize = "1em";
-    isGrayscale = false;
-    isHighContrast = false;
-    isInverted = false;
-    isLightBg = false;
-    linksHighlighted = false;
-    isReadableFont = false;
-
-    site.style.filter = "none";
-    site.classList.remove("high-contrast");
-    site.style.backgroundColor = "";
-    site.style.color = "";
-    site.style.fontFamily = "";
-
-    site.querySelectorAll("img").forEach((img) => {
-      img.style.filter = "";
-    });
-
-    site.querySelectorAll("*").forEach((el) => {
-  el.style.backgroundColor = "";
-  el.style.color = "";
-});
-
-
-    site.querySelectorAll("a").forEach((link) => {
-      link.style.outline = "";
-      link.style.backgroundColor = "";
-    });
-
-    updateAccessButtonBackground(false);
-  };
-
-  function isAnyAccessibilityActive() {
-    return (
-      currentFontSize !== 1 ||
-      isGrayscale ||
-      isHighContrast ||
-      isInverted ||
-      isLightBg ||
-      linksHighlighted ||
-      isReadableFont
-    );
-  }
-
-  const buttons = document.querySelectorAll(".access-content button");
-  if (buttons.length >= 9) {
-    buttons[0].addEventListener("click", increaseText);
-    buttons[1].addEventListener("click", decreaseText);
-    buttons[2].addEventListener("click", toggleGrayscale);
-    buttons[3].addEventListener("click", toggleHighContrast);
-    buttons[4].addEventListener("click", toggleInverted);
-    buttons[5].addEventListener("click", toggleLightBackground);
-    buttons[6].addEventListener("click", toggleHighlightLinks);
-    buttons[7].addEventListener("click", toggleReadableFont);
-    buttons[8].addEventListener("click", resetAccessibility);
-  } else {
-    console.warn("לא נמצאו מספיק כפתורים בתפריט הנגישות");
-  }
-});
 
 document.getElementById("whatsapp-btn").onclick = function () {
   const message = `שלום, הגעתי אליך דרך האתר שלך. אני מעוניין לרכוש ליקרים`;
@@ -177,6 +5,15 @@ document.getElementById("whatsapp-btn").onclick = function () {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 };
+
+
+document.getElementById("faq-contact").onclick = function () {
+  const message = `שלום, הגעתי אלייך דרך האתר, יש לי שאלה`;
+  const phone = "972537985298";
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+};
+
 
 document.querySelectorAll(".stars").forEach((starsContainer) => {
   const count = parseInt(starsContainer.dataset.stars || "0");
@@ -276,46 +113,120 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// change img class for collection
-document.addEventListener("DOMContentLoaded", () => {
-  const liquerImg = document.querySelector(".collection-img-div");
 
-  liquerImg.addEventListener("click", () => {
-    liquerImg.classList.toggle("liquer-active");
-  });
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const liquerImgs = document.querySelectorAll(".liquer-img");
   const overlay = document.getElementById("overlay");
 
-  liquerImgs.forEach((img) => {
+  liquerImgs.forEach(img => {
+    // זום בעכבר (hover)
+    img.addEventListener("mousemove", e => {
+      const rect = img.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      img.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+      img.style.transform = "scale(2)";
+      img.style.transition = "transform 0.3s ease";
+      img.style.cursor = "zoom-in";
+    });
+
+    img.addEventListener("mouseleave", () => {
+      img.style.transform = "scale(1)";
+      img.style.transformOrigin = "center center";
+      img.style.transition = "transform 0.3s ease";
+      img.style.cursor = "default";
+    });
+
+    // קליק לפתיחת העותק המורחב ב-overlay
     img.addEventListener("click", () => {
-      const isExpanded = img.classList.contains("expanded");
-      const expandedNow = document.querySelector(".liquer-img.expanded");
+      overlay.innerHTML = ""; // ניקוי תוכן קודם
 
-      // סגור תמונה פתוחה אחרת קודם
-      if (expandedNow && expandedNow !== img) {
-        expandedNow.classList.remove("expanded");
-      }
+      const expandedImg = img.cloneNode(true); // שכפול התמונה
+      expandedImg.classList.add("expanded"); // להוסיף קלאס לעיצוב
 
-      // Toggle לתמונה הנוכחית
-      img.classList.toggle("expanded");
+      // ניקוי transform ו-transform-origin כדי למרכז כמו שצריך
+      expandedImg.style.transform = '';
+      expandedImg.style.transformOrigin = '';
+      expandedImg.style.cursor = 'zoom-out';
 
-      // הצגת או הסתרת overlay
-      if (img.classList.contains("expanded")) {
-        overlay.style.display = "block";
-      } else {
+      overlay.appendChild(expandedImg);
+      overlay.style.display = "flex";
+
+      // מניעת גלילה ברקע
+      document.body.style.overflow = "hidden";
+
+      // לחיצה על התמונה המורחבת סוגרת את ה-overlay
+      expandedImg.addEventListener("click", () => {
         overlay.style.display = "none";
-      }
-    });
-  });
+        overlay.innerHTML = "";
+        document.body.style.overflow = "auto";
+      });
 
-  // סגירה אם לוחצים על הרקע
-  overlay.addEventListener("click", () => {
-    document.querySelectorAll(".liquer-img.expanded").forEach((img) => {
-      img.classList.remove("expanded");
+      // לחיצה על ה-overlay מחוץ לתמונה סוגרת
+      overlay.addEventListener("click", e => {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+          overlay.innerHTML = "";
+          document.body.style.overflow = "auto";
+        }
+      }, { once: true });
     });
-    overlay.style.display = "none";
   });
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  emailjs.init("2jpU5CgCOgcvvXP-E"); // ← החלף ב־Public Key שלך
+  const form = document.getElementById('recommendation-form');
+
+  // לנהל את דירוג הכוכבים (עדכון input.hidden)
+  const stars = document.querySelectorAll('#star-rating .star');
+  const ratingInput = document.getElementById('rating-value');
+
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const rating = star.getAttribute('data-value');
+      ratingInput.value = rating;
+
+      // עדכון מראה הכוכבים (לדוגמה, הצבעה לכוכבים נבחרים)
+      stars.forEach(s => {
+        if (s.getAttribute('data-value') <= rating) {
+          s.style.color = 'gold';
+        } else {
+          s.style.color = 'gray';
+        }
+      });
+    });
+  });
+
+  const submitBtn = document.getElementById("submitbtn");
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // הפעלת מצב טעינה
+  submitBtn.disabled = true;
+  submitBtn.classList.add("loading");
+
+  emailjs.sendForm('service_mcl574a', 'template_30db5qj', this)
+    .then(() => {
+      alert('✅ ההמלצה נשלחה בהצלחה!');
+      document.getElementById("popup-overlay").style.display = "none";
+      form.reset();
+      stars.forEach(s => s.style.color = 'gray');
+    })
+    .catch((error) => {
+      alert('❌ שגיאה בשליחה: ' + JSON.stringify(error));
+    })
+    .finally(() => {
+      // החזרת הכפתור למצב רגיל
+      submitBtn.disabled = false;
+      submitBtn.classList.remove("loading");
+    });
+});
+})
+
